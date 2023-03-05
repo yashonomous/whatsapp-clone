@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ChatContainer from "./components/ChatContainer";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="h-screen w-screen grid place-items-center"
+      style={{
+        background: `linear-gradient(to bottom, #01A784 8rem, #EDEDEB 8rem)`,
+      }}
+    >
+      <div className="h-[95vh] w-[98vw] flex rounded-sm">
+        <Sidebar />
+        <ChatContainer />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+//linear-gradient(to bottom, #01A784, #EDEDEB)
